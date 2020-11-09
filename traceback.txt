@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 68, in script
+    e "You've created a new Ren'Py game."
+Exception: Sayer 'e' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 68, in script
+    e "You've created a new Ren'Py game."
+  File "D:\renpy\renpy\ast.py", line 678, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "D:\renpy\renpy\ast.py", line 576, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'e' is not defined.
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+new sosland 1.0
+Tue Nov 03 22:09:08 2020
