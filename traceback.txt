@@ -1,22 +1,33 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 68, in script
-    e "You've created a new Ren'Py game."
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 23, in script
+    "{color="#b32e2e"}Голос в голове{/color}" "Похоже кто-то вчера очень перепил..."
+Exception: Open text tag at end of string u'{color='.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 68, in script
-    e "You've created a new Ren'Py game."
-  File "D:\renpy\renpy\ast.py", line 678, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "D:\renpy\renpy\ast.py", line 576, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 23, in script
+    "{color="#b32e2e"}Голос в голове{/color}" "Похоже кто-то вчера очень перепил..."
+  File "C:\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "C:\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "C:\renpy-7.3.5-sdk\renpy\character.py", line 572, in display_say
+    what_text.update()
+  File "C:\renpy-7.3.5-sdk\renpy\text\text.py", line 1694, in update
+    tokens = self.tokenize(text)
+  File "C:\renpy-7.3.5-sdk\renpy\text\text.py", line 2164, in tokenize
+    tokens.extend(textsupport.tokenize(i))
+  File "textsupport.pyx", line 122, in renpy.text.textsupport.tokenize
+Exception: Open text tag at end of string u'{color='.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 new sosland 1.0
-Tue Nov 03 22:09:08 2020
+Thu Nov 19 22:23:32 2020

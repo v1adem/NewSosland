@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 104: choice menuitem expects a non-empty block.
-    "НУ И ЧТО?!":
-                 ^
+File "game/script.rpy", line 156: end of line expected.
+    y "-----------NEW ITEM-----------""{color=#fbff00}5${/color}" 
+                                      ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Nov 09 15:05:13 2020
+Thu Nov 12 19:21:42 2020
